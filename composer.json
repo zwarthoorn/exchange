@@ -1,0 +1,22 @@
+{
+    "name": "zwarthoorn/exchange",
+    "description": "a api interface with osbuddy",
+    "type": "library",
+    "require": {
+        "php": "7.2.*",
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zwarthoorn",
+            "email": "trendariamail@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Exchange\\" : "src"
+        }
+    }
+}
