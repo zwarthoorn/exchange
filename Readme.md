@@ -1,5 +1,4 @@
 Oldschool Runescape Exchange api
 ======
 
-this is still a work in progress i am working on varios things
-but first i will lay down the bases
+The bases are there. i will come out with more infromation in the next few days on how to use it and how to install it
