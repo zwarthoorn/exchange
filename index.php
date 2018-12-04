@@ -7,8 +7,17 @@
  */
 require_once __DIR__ . '/vendor/autoload.php'; // Autoload files using
 
-use Zwarthoorn\Api;
+use Exchange\Api;
 
-$api = new Api();
+$names = Api::getNames(false);
 
-$api->test();
+?>
+<html>
+<body>
+<pre>
+    <?php
+     var_dump($names);
+    ?>
+</pre>
+</body>
+</html>

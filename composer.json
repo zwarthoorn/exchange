@@ -3,7 +3,7 @@
     "description": "a api interface with osbuddy",
     "type": "library",
     "require": {
-        "php": "7.2.*",
+        "php": "7.*.*",
         "guzzlehttp/guzzle": "~6.0"
     },
     "license": "MIT",

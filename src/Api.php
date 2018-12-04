@@ -9,21 +9,42 @@
 namespace Exchange;
 
 
+
 class Api
 {
     protected $config;
 
-    public function __construct()
-    {
-
-    }
-
     /*
      * get the names of all the items in game
+     * with images will make it slow becouse of the image download speed
      */
-    public function getNames():array {
-        $returnArray = [];
+    public static function getNames(bool $withPrice = false,bool $withImages = false, bool $asArray = false) {
 
-        return $returnArray;
+        if (!$withPrice){
+           return itemsModel::get($asArray,$withImages);
+        }else{
+            return itemsModel::getWithPrice($asArray,$withImages);
+        }
+
     }
+    public static function getImageByItemId($itemId,$name = null,$extension = '.png'){
+        $config = ConfigGetter::getConfig();
+
+        $url = $config['img_url'].$itemId.'.png';
+        $fileName = $itemId;
+        if ($name) $fileName = $name;
+
+        $path = requestHandler::downloadImage($url,$fileName,$extension);
+
+        return $path;
+    }
+
+    public static function getPriceRangeItem($itemId){
+
+    }
+
+    public static function getPriceItem($itemId){
+
+    }
+
 }
